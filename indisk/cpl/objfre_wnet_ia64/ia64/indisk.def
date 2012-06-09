@@ -1,0 +1,128 @@
+
+LIBRARY indisk.cpl
+
+EXPORTS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	CPlApplet
+
+	RunDLL_MountFile
+	RunDLL_RemoveDevice
+	RunDLL_SaveImageFile
+
+	MsgBoxPrintF
+
+	MsgBoxLastError
+	InDiskGetAPIFlags
+	InDiskSetAPIFlags
+	InDiskGetPartitionTypeName
+	InDiskGetOffsetByFileExt
+	InDiskGetPartitionInformation
+	InDiskReadFileHandle
+	InDiskGetPartitionInfoIndirect
+	InDiskStartService
+	InDiskCreateMountPoint
+	InDiskRemoveMountPoint
+	InDiskOpenDeviceByName
+	InDiskOpenDeviceByNumber
+	InDiskOpenDeviceByMountPoint
+	InDiskCheckDriverVersion
+	InDiskGetVersion
+	InDiskFindFreeDriveLetter
+	InDiskGetDeviceList
+	InDiskQueryDevice
+	InDiskCreateDevice
+	InDiskCreateDeviceEx
+	InDiskForceRemoveDevice
+	InDiskRemoveDevice
+	InDiskChangeFlags
+	InDiskExtendDevice
+	InDiskSaveImageFile
+	InDiskGetVolumeSize
+	InDiskBuildMBR
+	InDiskConvertCHSToLBA
+	InDiskConvertLBAToCHS
+	InDiskAdjustImageFileSize
+	InDiskNativePathToWin32
+	InDiskSaveImageFileInteractive
+
+

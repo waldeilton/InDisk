@@ -1,0 +1,128 @@
+
+LIBRARY indisk.cpl
+
+EXPORTS
+
+
+
+	CPlApplet=_CPlApplet@16
+
+	RunDLL_MountFile=_RunDLL_MountFile@16
+	RunDLL_RemoveDevice=_RunDLL_RemoveDevice@16
+	RunDLL_SaveImageFile=_RunDLL_SaveImageFile@16
+
+	MsgBoxPrintF
+
+	_MsgBoxLastError@8
+	_InDiskGetAPIFlags@0
+	_InDiskSetAPIFlags@8
+	_InDiskGetPartitionTypeName@12
+	_InDiskGetOffsetByFileExt@8
+	_InDiskGetPartitionInformation@16
+	_InDiskReadFileHandle@24
+	_InDiskGetPartitionInfoIndirect@20
+	_InDiskStartService@4
+	_InDiskCreateMountPoint@8
+	_InDiskRemoveMountPoint@4
+	_InDiskOpenDeviceByName@8
+	_InDiskOpenDeviceByNumber@8
+	_InDiskOpenDeviceByMountPoint@8
+	_InDiskCheckDriverVersion@4
+	_InDiskGetVersion@8
+	_InDiskFindFreeDriveLetter@0
+	_InDiskGetDeviceList@0
+	_InDiskQueryDevice@12
+	_InDiskCreateDevice@28
+	_InDiskCreateDeviceEx@32
+	_InDiskForceRemoveDevice@8
+	_InDiskRemoveDevice@12
+	_InDiskChangeFlags@20
+	_InDiskExtendDevice@12
+	_InDiskSaveImageFile@16
+	_InDiskGetVolumeSize@8
+	_InDiskBuildMBR@20
+	_InDiskConvertCHSToLBA@8
+	_InDiskConvertLBAToCHS@8
+	_InDiskAdjustImageFileSize@8
+	_InDiskNativePathToWin32@4
+	_InDiskSaveImageFileInteractive@16
+
+	MsgBoxLastError=_MsgBoxLastError@8
+	InDiskGetAPIFlags=_InDiskGetAPIFlags@0
+	InDiskSetAPIFlags=_InDiskSetAPIFlags@8
+	InDiskGetPartitionTypeName=_InDiskGetPartitionTypeName@12
+	InDiskGetOffsetByFileExt=_InDiskGetOffsetByFileExt@8
+	InDiskGetPartitionInformation=_InDiskGetPartitionInformation@16
+	InDiskReadFileHandle=_InDiskReadFileHandle@24
+	InDiskGetPartitionInfoIndirect=_InDiskGetPartitionInfoIndirect@20
+	InDiskStartService=_InDiskStartService@4
+	InDiskCreateMountPoint=_InDiskCreateMountPoint@8
+	InDiskRemoveMountPoint=_InDiskRemoveMountPoint@4
+	InDiskOpenDeviceByName=_InDiskOpenDeviceByName@8
+	InDiskOpenDeviceByNumber=_InDiskOpenDeviceByNumber@8
+	InDiskOpenDeviceByMountPoint=_InDiskOpenDeviceByMountPoint@8
+	InDiskCheckDriverVersion=_InDiskCheckDriverVersion@4
+	InDiskGetVersion=_InDiskGetVersion@8
+	InDiskFindFreeDriveLetter=_InDiskFindFreeDriveLetter@0
+	InDiskGetDeviceList=_InDiskGetDeviceList@0
+	InDiskQueryDevice=_InDiskQueryDevice@12
+	InDiskCreateDevice=_InDiskCreateDevice@28
+	InDiskCreateDeviceEx=_InDiskCreateDeviceEx@32
+	InDiskForceRemoveDevice=_InDiskForceRemoveDevice@8
+	InDiskRemoveDevice=_InDiskRemoveDevice@12
+	InDiskChangeFlags=_InDiskChangeFlags@20
+	InDiskExtendDevice=_InDiskExtendDevice@12
+	InDiskSaveImageFile=_InDiskSaveImageFile@16
+	InDiskGetVolumeSize=_InDiskGetVolumeSize@8
+	InDiskBuildMBR=_InDiskBuildMBR@20
+	InDiskConvertCHSToLBA=_InDiskConvertCHSToLBA@8
+	InDiskConvertLBAToCHS=_InDiskConvertLBAToCHS@8
+	InDiskAdjustImageFileSize=_InDiskAdjustImageFileSize@8
+	InDiskNativePathToWin32=_InDiskNativePathToWin32@4
+	InDiskSaveImageFileInteractive=_InDiskSaveImageFileInteractive@16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+for file in `find ./ -name "*imd*"`
+do
+    oldfile=$(basename $file)
+    dirname=$(dirname $file)
+    newfile=$(echo "$oldfile" | sed 's/imd/ind/g')
+    if [ ! "$newfile" = "$oldfile" ]
+    then
+        mv "$file" "$dirname/$newfile"
+    fi
+done
+

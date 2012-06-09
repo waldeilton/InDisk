@@ -1,0 +1,192 @@
+[Version]
+signature = "$Windows NT$"
+Provider = "LTR Data"
+DriverVer = 10/17/2011,1,05,02,0038
+
+
+[SourceDisksNames]
+1 = "InDisk Virtual Disk Driver Installation disk"
+
+
+[SourceDisksFiles.x86]
+awealloc.sys = 1,awealloc\i386
+indisk.sys = 1,sys\i386
+indsksvc.exe = 1,svc\i386
+indisk.cpl = 1,cpl\i386
+indisk.exe = 1,cli\i386
+indisk.inf = 1
+
+
+[SourceDisksFiles.ia64]
+awealloc.sys = 1,awealloc\ia64
+indisk.sys = 1,sys\ia64
+indsksvc.exe = 1,svc\ia64
+indisk.cpl = 1,cpl\ia64
+indisk.exe = 1,cli\ia64
+indisk.inf = 1
+
+
+[SourceDisksFiles.amd64]
+awealloc.sys = 1,awealloc\amd64
+indisk.sys = 1,sys\amd64
+indsksvc.exe = 1,svc\amd64
+indisk.cpl = 1,cpl\amd64
+indisk.exe = 1,cli\amd64
+indisk.inf = 1
+
+
+[DestinationDirs]
+indiskExeFiles = 11
+indiskExe32Files = 16425
+indiskSysFiles = 12
+indiskInfFiles = 17
+ 
+
+[DefaultInstall.ntx86]
+CopyFiles = indiskSysFiles, indiskExeFiles, indiskInfFiles
+AddReg = indiskAddReg
+DelReg = indiskDelOldReg
+
+
+[DefaultUninstall.ntx86]
+DelFiles = indiskSysFiles, indiskExeFiles, indiskInfFiles
+DelReg = indiskDelReg
+
+
+[DefaultInstall.ntamd64]
+CopyFiles = indiskSysFiles, indiskExeFiles, indiskExe32Files, indiskInfFiles
+AddReg = indiskAddReg
+DelReg = indiskDelOldReg
+
+
+[DefaultUninstall.ntamd64]
+DelFiles = indiskSysFiles, indiskExeFiles, indiskExe32Files, indiskInfFiles
+DelReg = indiskDelReg
+
+
+[DefaultInstall.ntia64]
+CopyFiles = indiskSysFiles, indiskExeFiles, indiskExe32Files, indiskInfFiles
+AddReg = indiskAddReg
+DelReg = indiskDelOldReg
+
+
+[DefaultUninstall.ntia64]
+DelFiles = indiskSysFiles, indiskExeFiles, indiskExe32Files, indiskInfFiles
+DelReg = indiskDelReg
+
+
+[DefaultInstall.ntx86.Services]
+AddService = AWEAlloc, , AWEAllocDrv
+AddService = indisk, , indskDrv
+AddService = indskSvc, , indskSvc
+
+
+[DefaultUninstall.ntx86.Services]
+DelService = AWEAlloc
+DelService = indisk
+DelService = indskSvc
+
+
+[DefaultInstall.ntamd64.Services]
+AddService = AWEAlloc, , AWEAllocDrv
+AddService = indisk, , indskDrv
+AddService = indskSvc, , indskSvc
+
+
+[DefaultUninstall.ntamd64.Services]
+DelService = AWEAlloc
+DelService = indisk
+DelService = indskSvc
+
+
+[DefaultInstall.ntia64.Services]
+AddService = AWEAlloc, , AWEAllocDrv
+AddService = indisk, , indskDrv
+AddService = indskSvc, , indskSvc
+
+
+[DefaultUninstall.ntia64.Services]
+DelService = AWEAlloc
+DelService = indisk
+DelService = indskSvc
+
+
+[indiskExeFiles]
+indisk.exe
+indisk.cpl
+indsksvc.exe
+
+
+[indiskExe32Files]
+indisk.exe,cli\i386\indisk.exe
+indisk.cpl,cpl\i386\indisk.cpl
+
+
+[indiskSysFiles]
+awealloc.sys
+indisk.sys
+
+
+[indiskInfFiles]
+indisk.inf
+
+
+[indiskAddReg]
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\indisk", "DisplayName", 0, "indisk Virtual Disk Driver"
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\indisk", "UninstallString", 0, "rundll32.exe setupapi.dll,InstallHinfSection DefaultUninstall 132 %17%\indisk.inf"
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\indisk", "DisplayIcon", 0, "%11%\indisk.cpl"
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\indisk", "EstimatedSize", 65537, 3635
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\indisk", "Size", 0, ""
+
+HKCR, "*\shell\indiskMountFile", , 0, "Mount as indisk Virtual Disk"
+HKCR, "*\shell\indiskMountFile\command", , 0, "rundll32.exe indisk.cpl,RunDLL_MountFile %%L"
+
+HKCR, "Drive\shell\indiskUnmount", , 0, "Unmount indisk Virtual Disk"
+HKCR, "Drive\shell\indiskUnmount\command", , 0, "rundll32.exe indisk.cpl,RunDLL_RemoveDevice %%L"
+
+HKCR, "Drive\shell\indiskSaveImage", , 0, "Save disk contents as image file"
+HKCR, "Drive\shell\indiskSaveImage\command", , 0, "rundll32.exe indisk.cpl,RunDLL_SaveImageFile %%L"
+
+
+[indiskDelOldReg]
+HKCR, "*\shell\indiskMountFileWriteable"
+
+
+[indiskDelReg]
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\indisk"
+
+HKCR, "*\shell\indiskMountFile"
+
+HKCR, "*\shell\indiskMountFileWriteable"
+
+HKCR, "Drive\shell\indiskUnmount"
+
+HKCR, "Drive\shell\indiskSaveImage"
+
+
+[indskDrv]
+DisplayName = "indisk Virtual Disk Driver"
+Description = "Disk emulation driver"
+ServiceType = 1
+StartType = 2
+ErrorControl = 0
+ServiceBinary = %12%\indisk.sys
+
+
+[AWEAllocDrv]
+DisplayName = "AWE Memory Allocation Driver"
+Description = "Driver for physical memory allocation through AWE"
+ServiceType = 1
+StartType = 3
+ErrorControl = 0
+ServiceBinary = %12%\awealloc.sys
+
+
+[indskSvc]
+DisplayName = "indisk Virtual Disk Driver Helper"
+Description = "Helper service for indisk Virtual Disk Driver."
+ServiceType = 16
+StartType = 2
+ErrorControl = 0
+ServiceBinary = %11%\indsksvc.exe
+

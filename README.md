@@ -21,6 +21,9 @@ actual source for this project will be maintained in the InDisk
 directory, and will be compilable with Visual Studio 2008 or
 later.
 
+See InDisk on YouTube:
+http://www.youtube.com/watch?v=EM56J1QRS-I
+
 
 May 30, 2012 RCH
 ======

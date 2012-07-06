@@ -1,4 +1,3 @@
-
 	  InDisk
 	===========
 	== Indirect Disk
@@ -10,6 +9,18 @@
 	== Original GitHub:  May 30, 2012
 	===========
 
+
+July 6, 2012 RCH
+======
+I have been developing client / server protocols for
+communicating between local and remote.  Code is 100%
+functional for transferring messages back and forth.
+40% functional in terms of fully supporting all necessary
+options in protocol form to support a robust, real-time,
+peer-to-peer / client-server model of data maintenance.
+
+Have not yet begun working on ImDisk support as I am
+able to handle everything in simulation right now.
 
 
 June 8, 2012 RCH
